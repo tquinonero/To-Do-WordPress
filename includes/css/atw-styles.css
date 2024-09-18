@@ -1,0 +1,151 @@
+.atw-todo-list {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+#add-task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#new-task-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+#add-task-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-task-button:hover {
+    background-color: #45a049;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+#task-list li:hover {
+    background-color: #f9f9f9;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-content {
+    flex-grow: 1;
+}
+
+.task-checkbox:checked + .task-content {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#remove-completed {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#remove-completed:hover {
+    background-color: #d32f2f;
+}
+
+/* Add this to your existing CSS */
+.atw-task-item.completed label {
+    color: green;
+    text-decoration: line-through;
+}
+
+/* Add these styles to your existing CSS file */
+
+.atw-task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.atw-task-checkbox {
+    margin-right: 10px;
+}
+
+.atw-task-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.atw-task-content label {
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.atw-remove-task {
+    padding: 0 8px !important;
+    height: 24px !important;
+    line-height: 22px !important;
+    font-size: 11px !important;
+}
+
+.atw-task-item.completed label {
+    color: #82878c;
+    text-decoration: line-through;
+}
+
+/* Style for Add Task button */
+.atw-add-task-form button[type="submit"] {
+    background-color: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+.atw-add-task-form button[type="submit"]:hover,
+.atw-add-task-form button[type="submit"]:focus {
+    background-color: #008ec2;
+    border-color: #006799;
+    color: #fff;
+}
+
+/* Adjust the progress bar style */
+.atw-progress-bar {
+    background-color: #e5e5e5;
+    height: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.atw-progress {
+    background-color: #0085ba;
+    height: 100%;
+    transition: width 0.3s ease;
+}
