@@ -78,13 +78,10 @@
     background-color: #d32f2f;
 }
 
-/* Add this to your existing CSS */
 .atw-task-item.completed label {
     color: green;
     text-decoration: line-through;
 }
-
-/* Add these styles to your existing CSS file */
 
 .atw-task-item {
     display: flex;
@@ -122,6 +119,10 @@
 
 /* Style for Add Task button */
 .atw-add-task-form button[type="submit"] {
+    font-size:0.85rem;
+    padding: 5px 10px;
+    border-radius: 4px 4px 4px 4px;
+    margin-left: 10px;
     background-color: #0085ba;
     border-color: #0073aa #006799 #006799;
     color: #fff;
@@ -145,7 +146,7 @@
 }
 
 .atw-progress {
-    background-color: #0085ba;
+    background-color: #00ba73;
     height: 100%;
     transition: width 0.3s ease;
 }
