@@ -2,7 +2,7 @@
 /*
 Plugin Name: Admin To-Do Widget
 Description: A widget that displays a to-do list in the admin dashboard.
-Version: 1.0
+Version: 1.2
 Author: Toni Quinonero
 */
 
