@@ -43,3 +43,24 @@ function atw_display_dashboard_widget() {
     $widget_display = new ATW_Widget_Display();
     $widget_display->display_widget();
 }
+
+// Register deactivation hook
+register_deactivation_hook(__FILE__, 'atw_delete_stored_tasks');
+
+function atw_delete_stored_tasks() {
+    // Get the option name for tasks
+    $option_name = 'atw_tasks'; // Default option name
+    $options = get_option('atw_options', array());
+
+    // Check if user-specific lists are enabled
+    if (!empty($options['user_specific_lists'])) {
+        // Delete user-specific tasks for all users
+        $users = get_users();
+        foreach ($users as $user) {
+            delete_option('atw_tasks_user_' . $user->ID);
+        }
+    } else {
+        // Delete the shared tasks option
+        delete_option($option_name);
+    }
+}
